@@ -30,24 +30,24 @@
 					fields.');
 			if ($pass != $confirm)
 				throw new Exception('Passwords must match.');
-			
+
 			// create db connection
 			//$con = new mysqli('localhost',
 			//	'root','','beerstoredb');
 
 			$result = $con->query(
-				"SELECT * FROM users 
+				"SELECT * FROM users
 				WHERE user_name = '$username'");
 
 			if ($result->num_rows > 0) {
 				throw new Exception('Username already taken. Please choose another one.');
 			}
 			// we're good to go, save to db
-						
+
 			// encrypt password
 			$pass = $con->real_escape_string(
 				password_hash($pass, PASSWORD_BCRYPT));
-			
+
 			// insert into db
 			$query = "INSERT INTO users(
 				user_name, pass, join_date)
@@ -66,5 +66,6 @@
 	}
 ?>
 <br><br>
+<a href="./">Home</a>
 <a href="login.php">Log In</a>
 <?php include('include/footer.html');?>

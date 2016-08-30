@@ -1,3 +1,19 @@
 </div>
+<script>
+	var nav = document.getElementById('main-nav'),
+		links = nav.getElementsByTagName('a'),
+		page = location.pathname.substring(
+			location.pathname.lastIndexOf('/') + 1),
+		linkPath;
+	if (typeof links === 'object' && links.length > 0) {
+		for (var i = 0; i < links.length; i++) {
+			linkPath = links[i].getAttribute('href').replace(/\.\//, '');
+			if (linkPath === page) {
+				links[i].className = 'active';
+				break; // active navlinks are like the Highlander...there can only be one
+			}
+		}
+	}
+</script>
 </body>
 </htmls>

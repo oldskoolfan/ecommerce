@@ -7,10 +7,7 @@
 	$user = $con->query("SELECT * FROM users WHERE user_id = {$_SESSION['id']}")->fetch_assoc();
 	$date = new DateTime($user['join_date']);
 ?>
-	<div class="greeting">
-		<a href="./">Home</a>
-		<a href="logout.php">Log Out</a>
-	</div>
+	<?php include 'include/nav.php' ?>
 	<table id="ProfileTable">
 	<tr><td>First Name</td><td><?=$user['firstname']?></td></tr>
 	<tr><td>Last Name</td><td><?=$user['lastname']?></td></tr>

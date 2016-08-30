@@ -10,9 +10,44 @@ html, body {
 	position: relative;
 }
 
+#main-bkgd {
+	z-index: -2;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-image: url('bkgd.jpeg');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center;
+}
+
+@media(max-width: 1040px) {
+	#main-bkgd {
+		background-size: auto 100%;
+	}
+}
+
+#main-overlay {
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(#555 10%, rgba(0, 0, 0, 0.6) 90%);
+}
+
 #PageWrapper {
 	width: 60%;
 	margin: 3% auto;
+	position: relative;
+}
+#PageWrapper:after {
+	content: " ";
+	display: table;
+	clear: both;
 }
 
 h1, h2, h3, h6 { text-align: center; margin: 0; }
@@ -22,6 +57,12 @@ a {
 	display: block;
 	margin: 0 auto;
 	text-align: center;
+	line-height: 1.5em;
+	text-decoration: none;
+	color: #5789b9;
+}
+a.active, a:hover {
+	text-decoration: underline;
 }
 
 .edit-product a { width: auto; }
@@ -29,11 +70,18 @@ a {
 td a { width: auto; display: inline; }
 
 .greeting {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 20px;
 	text-align: right;
 	padding: 20px;
+}
+
+.greeting.static {
+	position: static;
+	float: right;
+	top: auto;
+	right: auto;
 }
 
 .greeting a {
@@ -57,7 +105,7 @@ form {
 .orders td { text-align: center; }
 
 label {
-	display: block;	
+	display: block;
 	margin: 10px 0;
 }
 
@@ -71,10 +119,10 @@ select[name=beer] { width: 150px; }
 input[name=state],input[name=quantity] { width: 60px; }
 input[name=zipcode] { width: 120px; }
 input, select { font: inherit; font-size: 1rem; }
-input[type=submit] { 
+input[type=submit] {
 	display: block;
 	width: 120px;
-	margin: 0 auto; 
+	margin: 0 auto;
 }
 option { text-align: right; }
 
@@ -103,5 +151,3 @@ table#ProductTable th, table#OrderTable th { text-align: left; }
 
 table#ProfileTable { width: 250px; margin: 30px auto; }
 table#ProfileTable td { margin: 0; border: 1px solid #ccc; }
-
-

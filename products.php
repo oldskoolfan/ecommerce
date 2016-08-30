@@ -8,13 +8,7 @@
 
 	echo '<br><br><h2>Current Products</h2><br>';
 
-?>
-<div class="greeting">
-	<span>Hi, <?=$_SESSION['username']?>!</span>
-	<a href="./">Home</a>
-	<a href="logout.php">Log Out</a>
-</div>
-<?php
+	include 'include/nav.php';
 
 	// start our existing products table
 	echo '<table id="ProductTable">
