@@ -189,12 +189,12 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-#LOCK TABLES `users` WRITE;
-#/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-#INSERT INTO `users` VALUES (2,'andrew','$1$FB2mKVPF$7brMsCy.KVJG04c3Bxn8/.','2014-11-19 01:35:18','2015-01-11 18:09:17','3238 Brampton St','Dublin','Oh','43017','Andrew','Harris',1),(3,'bob','$1$PgLt/CD6$8rrDsghKj.1QYfO6WoFOo0','2015-01-10 10:34:25','2015-01-11 19:51:34','123 test st','dayton','oh','43343','bob','barker',0);
-#/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-#UNLOCK TABLES;
-#/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (2,'andrew','$1$FB2mKVPF$7brMsCy.KVJG04c3Bxn8/.','2014-11-19 01:35:18','2015-01-11 18:09:17','3238 Brampton St','Dublin','Oh','43017','Andrew','Harris',1),(3,'bob','$1$PgLt/CD6$8rrDsghKj.1QYfO6WoFOo0','2015-01-10 10:34:25','2015-01-11 19:51:34','123 test st','dayton','oh','43343','bob','barker',0);
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
