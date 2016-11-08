@@ -1,4 +1,4 @@
-# Ecommerce example
+# CSCI 2412 - Ecommerce example
 
 This is a basic example of how you can implement an ecommerce site with the following functionality:
 
